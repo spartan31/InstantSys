@@ -1,6 +1,6 @@
 package classes
 
-abstract class Shap(var name : String) {
+abstract class Shapes(var name : String) {
     constructor(name : String , vararg dimensions : Int) : this(name)
       init {
           funi()
@@ -16,7 +16,7 @@ fun main() {
     var b :Int= 11
     var c : Int= 13
     var d : Int = 63
-    var cc = object : Shap("Varun", a,b,c,d){
+    var cc = object : Shapes("Varun", a,b,c,d){
         init {
             println("Congratulations We have created a Anonymous Parallelogram ")
             println("Area of your Parallelogram is ${area()} ")

@@ -1,5 +1,5 @@
-class Generics<T>{
-     fun makenoise(a : T ){
+class Generics{
+     fun makenoise(){
      }
 }
 open class Mamal{
@@ -33,7 +33,7 @@ fun main() {
     var dl = listOf<Dog>(d2, d2)
 
     var g = Generics()
-    g.makenoise(al)
-    g.makenoise(dl)
+    g.makenoise()
+    g.makenoise()
 //    g.makenoise(ml)   this is not possible because by default it is  not alowed to acces it's parent classes
 }
