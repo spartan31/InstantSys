@@ -20,7 +20,7 @@ fun main() {
 //  4. Not Nul operator !!
 //   We use it when we are 100% sure that our paramteer is not null , with use this in place of safe call operator
 //     var q = n!!.length   this will gives error becuse n is null
-       var q = s!!.length
+    var q = s!!.length
     println(q)
 
 }

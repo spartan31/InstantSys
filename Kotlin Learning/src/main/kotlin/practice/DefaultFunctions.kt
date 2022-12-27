@@ -7,7 +7,6 @@ fun main() {
 
 }
 
-
 fun check(a : Int) : Int {
     println(a)
     var a  = 1

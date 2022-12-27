@@ -1,12 +1,9 @@
 class Generics<T>{
      fun makenoise(a : T ){
-
      }
 }
-
 open class Mamal{
 }
-
 open class  Animal : Mamal() {
     fun walk(){
     }
@@ -17,14 +14,11 @@ class  Dog : Animal(){
         println("Dog is Barking ")
     }
 }
-
 fun main() {
 //    var grn : Generics<Dog> = Generics()
 //    var d2: Dog = Dog()
 //    grn.workin(d2)
 //    grn.workin()
-
-
     var a1 = Animal()
     var a2: Animal = Animal()
     var al = listOf<Animal>(a1, a2)

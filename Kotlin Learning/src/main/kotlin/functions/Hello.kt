@@ -1,8 +1,7 @@
 import java.util.TreeMap
 
 fun main(args: Array<String>) {
-
-    // var is changable and val is never change it is just like final keyword
+// var is changable and val is never change it is just like final keyword
 //    val suraj = Aliens()
 //    suraj.name = " Alien name "
 //   println("Suraj is ${suraj.name}")

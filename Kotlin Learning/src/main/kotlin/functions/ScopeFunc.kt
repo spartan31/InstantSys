@@ -1,8 +1,10 @@
 package Functions
-class Person{
+
+class Person {
     var name = "Krishan"
     var age = 21
 }
+
 class ScopeFunc {
 }
 
@@ -13,14 +15,15 @@ fun main() {
 
 //    With scope function it's return type is lambda and context is object this
 
-    val reuslt = with(ob){
+    val result = with(ob) {
         println(this.name)
         println(this.age)
-        age+5
+        age + 5
     }
-    println(reuslt)
+    println(result)
 
-//    Apply keyword . 1> This will return object of class
+//    Apply keyword .
+//    1> This will return object of class
 
     val pp = Person().apply {
         this.name = "New Name"
@@ -30,7 +33,7 @@ fun main() {
 
 //    Also keyword used to perform some task after specific task
 
-    val list = mutableListOf<Int>(1 , 32, 5, 6, 5, 8)
+    val list = mutableListOf<Int>(1, 32, 5, 6, 5, 8)
 
     println(list)
     list.also {
