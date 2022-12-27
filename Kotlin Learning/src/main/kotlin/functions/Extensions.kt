@@ -1,19 +1,20 @@
-package Functions
-
+package functions
+// Extension functions are used to provide extra functions to class without accessing the Class
+//  Parent Class functions always takes the precedence
 fun main() {
-   var name =  "My name is krishan yadav"
+    var name =  "My name is krishan yadav"
     print(name.reversal())
 }
 
 fun String.reversal() : String{
-    if(this.length == 0){
-        return "Not Possile"
+    return if(this.isEmpty()){
+        "Not Possible"
     }else{
         var ans  = ""
         var temp = this.split(" ")
         for (i in temp.size-1 downTo 0 step 1){
-           ans = ans + temp[i] + " "
+            ans = ans + temp[i] + " "
         }
-      return ans.toString()
+        ans.toString()
     }
 }

@@ -2,33 +2,36 @@ package classes
 
 fun main() {
     println("Main Called")
-    print(Aa.num)
-    // object expression
-    var cc = object {
-        fun pp() = { println("Hello this ") }
+    println(WithPrint.num)
+    println(WithoutPrint.test())
+
+    // object expression also use to create Anonymous classes. We can even inherit interfaces and classes in this.
+    var obj = object{
+        fun anonymousClassFun() = { println("Hello this ") }
     }
+    obj.anonymousClassFun()
 
-    // anonymous objects of clone
-
-    var an = object : Clone{
+    // anonymous objects of inheriting clone interface
+    var obj2 = object : Clone{
         override fun inClone() {
-            println("In clonnable Interface ")
+            println("In cloneable Interface ")
         }
     }
+    obj2.inClone()
 }
 interface  Clone{
     fun inClone()
 }
-object  Aa{
+
+object  WithPrint{
     init {
-        println("Aa loded")
+        println("WithPrint class loaded on Runtime")
     }
-    val num :Int = 17
+    const val num :Int = 17
 }
-object  Bb{
-    val g : Int = 20
-    fun tes(){
-        println("I am in  object B")
+object  WithoutPrint{
+    fun test(){
+        println("I am in  object of Without Print Class")
     }
 }
 

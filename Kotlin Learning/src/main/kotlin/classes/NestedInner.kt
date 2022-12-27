@@ -1,59 +1,61 @@
 package classes
 
-
 class NestedInner {
-    var c : Int = 120
-    fun Pclass() {
+    var topVar: Int = 120
+    fun parentClass() {
         println("In Parent Class")
     }
+
     init {
-        Pclass()
+        parentClass()
+//        println(nestVar)  Nested Class members not accessible here
+//        println(innVar)   Inner Class members also not accessible here
     }
-//    print(d)  d is not availabel for this
-        class Nested(){
-            var d = 20
-            init {
-                 inNest()
-            }
-            fun inNest(){
+
+    class Nested() {
+        var nestVar = 20
+        init {
+            nestedClassFun()
+        }
+
+        fun nestedClassFun() {
             print("In Nested Class")
-//          print(c)  c is not available here
-             }
+//          print(topVar)  topVar is not accessible here means parent class members are not accessible here
+        }
+    }
+
+    inner class Inner {
+        var innVar = -1
+
+        init {
+            parentClass()
+            println(innVar) // we are acces parent class arguments
+            innerClassFun()
         }
 
-        inner class Inn{
-            var c = -1
-            var dr = 56
-            init {
-                Pclass()
-            println(c) // we are acces parent class arguments
-                infun()
-            }
-
-            fun infun(){
-                println("In Inner Class")
-            }
+        fun innerClassFun() {
+            println("In Inner Class")
         }
+    }
 }
 
 fun main() {
-    var a = NestedInner()
-    println(a.c)
-    NestedInner.Nested().d
+    var obj1 = NestedInner()
+    println(obj1.topVar)
+    NestedInner.Nested().nestVar
 
     // nested class
     // we can't directly create object by directly class name of  nested class lIKE  var c = Nested()
-    var ne = NestedInner.Nested()
-    println(ne.d)
-//    println(ne.c) it doest not because we doesn't have properties of Parent class
-    ne.inNest()
+    var obj2 = NestedInner.Nested()
+    println(obj2.nestVar)
+    obj2.nestedClassFun()
+//    println(ne.topVar)  doest not possible because we haven't properties of Parent class
+
 
     // inner class
-  var inn = NestedInner().Inn()
-//    inn.Inn().infun()
-    println(inn.c)
-
-//    print(inn.c)
+    var obj3 = NestedInner().Inner()
+    println(obj3.innVar)
+    obj3.innerClassFun()
 
 
 }

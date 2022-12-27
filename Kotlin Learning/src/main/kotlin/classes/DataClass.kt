@@ -1,32 +1,34 @@
 package classes
 
 fun main() {
-    var p = Person(age = 56 , name = "Ana")
-    var q = Person("Ana" , 56)
-    println( p.equals(q))
+    val p1 = Person(pAge = 40, pName = "Ana")
+    val p2 = Person("Ana", 20)
+    println(p1 == p2)
+    println(p1.pName)
 
-    var r = p.copy("Lata")
-    println(p.name)
+    val p3 = p1.copy("Lata")
+    println(p1)
+    println("Name of new object of Person 3  is $p3 ")
 }
 
-//class Inhe(name: String , a :Int) : Person(name , a){
-//
-//  data class can't be Inherited
-//}
+//class InheritData(name: String , a :Int) : Person(name , a){
+//  It's not possible Because data class can't be Inherited }
 
-data class Person(var name : String , var age : Int ){
+
+data class Person(var pName: String, var pAge: Int) {
     init {
-        name = name.uppercase()
-
-        if(age > 50){
-            throw ArithmeticException (" Illegal err")
+        pName = pName.uppercase()
+        if (pAge > 50) {
+            throw ArithmeticException(" Illegal age written")
         }
     }
     override fun toString(): String {
-        return "Person's Name : ${this.name}  Person's Age : ${this.age}"
+        return "Person's Name : ${this.pName}  Person's Age : ${this.pAge}"
     }
-
     override fun equals(other: Any?): Boolean {
         return super.equals(other)
+    }
+    override fun hashCode(): Int {
+        return super.hashCode()
     }
 }

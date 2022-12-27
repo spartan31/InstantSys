@@ -1,4 +1,4 @@
-package accesModifiers
+package accesmodifiers
 
 fun main() {
     var cc = D()

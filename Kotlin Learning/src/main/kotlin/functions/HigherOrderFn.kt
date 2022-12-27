@@ -1,16 +1,12 @@
-package Functions
-
-class HigherOrderFn {
-}
+package functions
 
 fun main() {
     var s = ::sum
-    highorder(10, 1, s)
-
+    highOrder(10, 1, s)
 }
 
-fun highorder(a : Int , b : Int , gn : ( d : Double , e : Double) -> Double){
-    val result = gn(10.0 , 20.0) +a +b
+fun highOrder(a : Int , b : Int , nested : ( d : Double , e : Double) -> Double){
+    val result = nested(10.0 , 20.0) + a + b
     println(result)
 }
 

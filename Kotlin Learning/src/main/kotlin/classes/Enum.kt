@@ -1,41 +1,39 @@
 package classes
 
-enum class Enum{
-    One ,
-    Two ,
-    Three ,
-    Anything
+enum class Enum {
+    ONE,
+    TWO,
+    THREE,
+    FOUR
 }
 
 fun main() {
-    var c : Enum = Enum.Anything
+    var e1: Enum = Enum.FOUR
+    var e2: Enum = Enum.ONE
 
-    var d: Enum = Enum.One
+    println(e1.ordinal)
+    println(e2.name)
 
-    println(c.ordinal)
-    println(d.name)
-
-    var de : Jwel = Jwel.Gold
+    var de: Jewel = Jewel.GOLD
     de.price = 5
     println(de.price)
     println(de.cashback())
 }
 
-/// paramaterised Enums
+// Parameterized Enums
 
-interface  Tes{
-    fun cashback() : Float
+interface Test1 {
+    fun cashback(): Float
 }
 
-enum class Jwel(var price : Int = 1000) : Tes{
-    Gold(25000){
+enum class Jewel(var price: Int = 1000) : Test1 {
+    GOLD(25000) {
         override fun cashback(): Float = 0.02f
-               },
-    Silver(15000){
+    },
+    SILVER(15000) {
         override fun cashback(): Float = 0.2f
     },
-    Diamond(1000000){
+    DIAMOND(1000000) {
         override fun cashback(): Float = 0.002f
     }
-
 }

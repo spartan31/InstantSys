@@ -1,4 +1,4 @@
-package accesModifiers
+package accesmodifiers
  //     This is for internal and PUBLIC
 fun main() {
     var a : Int = 10

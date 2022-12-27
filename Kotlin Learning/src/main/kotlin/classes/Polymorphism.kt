@@ -11,7 +11,7 @@ fun main() {
     println(sq2.area())
     println(sq2.area())
 }
-open class Shape {
+open class Shape{
     open fun area() : Double{
         return 0.0
     }

@@ -1,48 +1,45 @@
 package classes
 
 fun main() {
-    val c1 = Circ(10.0)
+    val c1 = Dentist(10.0)
     val p1 = Player("Anu")
-    // we can checj   type at RunTime
-//    if(p1 is Circ "){
-//     print("True ")
+//    if(p1 is Reporter){
+//     print("True ")   Here we are checking at compile time
 //    }
 
-    var arr : Array<Draggable> = arrayOf(Circ(10.0) , Player("Suraj"))
-    for (obj in arr){
-//        println("Array is Running")
-        if (obj is Circ){
-            obj.drag()
-            obj.area()
-        }else{
-            obj.drag()
+// here it will automatically cast our array to array of Work which is parent of both Player and Dentist
+    var arr: Array<Work> = arrayOf(Dentist(10.0), Player("Suraj"))
+    for (obj in arr) {
+        if (obj is Dentist) {
+            obj.working()
+            obj.fees()
+        } else {
+            obj.working()
             (obj as Player).sayMyName()
         }
     }
-
-}
-interface Draggable{
-    fun drag()
 }
 
-abstract class Shap : Draggable{
-    abstract fun area() : Double
+interface Work {
+    fun working()
 }
 
-class Circ(var rad : Double) : Shap(){
+abstract class Doctor : Work {
+    abstract fun fees(): Double
+}
 
-    override fun area(): Double {
-        return Math.PI * rad * rad
+class Dentist(var noOfPaatient: Double) : Doctor() {
+    override fun fees(): Double {
+        return 100.0 * noOfPaatient * noOfPaatient
     }
-
-    override fun drag() {
-        println("Circle is Dragging ")
+    override fun working() {
+        println("Dentist is Working ")
     }
 }
 
-class Player(var name : String) : Draggable{
-    override fun drag() {
-        println(" $name is Dragging ")
+class Player(var name: String) : Work {
+    override fun working() {
+        println(" $name is Playing ")
     }
-     val sayMyName : () -> Unit =  { print("my name is $name") }
+    val sayMyName: () -> Unit = { print("My name is $name") }
 }
