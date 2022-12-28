@@ -1,23 +1,32 @@
 package inheritance
+
 open class Parent {
-    constructor( name : Int ,  age : Int){
-        print("My name is $name and age is $age")
+    constructor(name: String, age: Int) {
+        print("Parent name is $name and age is $age")
     }
 }
-class Child(name : Int , age : Int , clas : String) : Parent(name , age){
-    var c : Int = 1000
-    init{
-        print(c)
-        print("Heloo")
+
+class Child(name: String, age: Int, school: String) : Parent(name, age) {
+    var childVal: Int = 1000
+    init {
+        print(childVal)
+        print("Hello from Child Side of $school school")
     }
 }
 
 class Rectangle(val width: Int, val height: Int) {
-    var area: Int
+    var area: Int = 0
         get() {
-            TODO()
+            return this.width * this.height
         }
         set(value) {
-
+            field = value
         }
+}
+
+fun main() {
+    val rect = Rectangle(10, 1)
+    println(rect.area)
+
+    val parent = Parent("Mr Rakesh" , 48)
 }

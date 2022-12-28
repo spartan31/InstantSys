@@ -1,30 +1,34 @@
-package Functions
+package functions
 
 fun main() {
-    val p = Hello(4)
-    val q = Hello(8)
-    val r = Hello(4)
+    val p = HeadClass(4)
+    val q = HeadClass(8)
+    val r = HeadClass(4)
+// here we are checking if p and  r referencing to same object or not
     if (p === r) {
         println("Matched !!")
     } else {
-        println("No ")
+        println("Not Matched ")
     }
+// adding p and q directly using + operator
+    val obj = p+q
+    println(obj.x)
     val x = p + q
     val left = arrayOf(1, 1, 1, 1)
     val right = arrayOf(2, 2, 2, 2)
-    val one = arrayOf(10, 11)
-    var mat = arrayOf(left, right, one)
+    val extraRow = arrayOf(10, 11)
+    var mat = arrayOf(left, right, extraRow)
 
     println(mat[0][1])
 }
 
-class Hello(var x: Int) {
+class HeadClass(var x: Int) {
     override fun equals(other: Any?): Boolean {
-        return this.x.equals((other as Hello).x)
+        return this.x.equals((other as HeadClass).x)
     }
 }
 // extending plus operator for hello class objects
-operator fun Hello.plus(y: Hello): Hello {
+operator fun HeadClass.plus(y: HeadClass): HeadClass {
     val p = this.x + y.x + 2
-    return Hello(p)
+    return HeadClass(p)
 }
