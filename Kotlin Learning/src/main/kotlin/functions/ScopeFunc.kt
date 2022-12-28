@@ -1,6 +1,6 @@
 package functions
 
-class Person{
+class Person {
     var name = "Krishan"
     var age = 21
 }

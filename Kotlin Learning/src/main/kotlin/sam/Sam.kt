@@ -1,27 +1,24 @@
-package SAM
+package sam
 
 fun main() {
-// without SAM conversion
-
-    // Creating an instance of a class
-    val isEven = object : IntPredicate {
-        override fun accept(i: Int): Boolean {
+//      without SAM conversion
+//    Creating an instance of a class
+    val isEven = object : SamFunction {
+        override fun abstractMethod(i: Int): Boolean {
             return i % 2 == 0
         }
     }
 
 //    with sam conversion
-    val even = IntPredicate{ it % 2 == 0}
-     even.call()
+    val even = SamFunction { it % 2 == 0 }
+    even.defaultMethod()
 
-    println("Is 7 even? - ${isEven.accept(7)}")
+    println("Is 7 even? - ${isEven.abstractMethod(7)}")
 }
 
-fun interface IntPredicate {
-    fun accept(i: Int): Boolean
-
-
-    fun call() {
-         print("Printing non abstract method")
-     }
+fun interface SamFunction {
+    fun abstractMethod(i: Int): Boolean
+    fun defaultMethod() {
+        println("Printing non abstract method")
+    }
 }

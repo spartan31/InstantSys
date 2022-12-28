@@ -14,6 +14,7 @@ class NestedInner {
 
     class Nested() {
         var nestVar = 20
+
         init {
             nestedClassFun()
         }
@@ -40,22 +41,20 @@ class NestedInner {
 }
 
 fun main() {
-    var obj1 = NestedInner()
+    val obj1 = NestedInner()
     println(obj1.topVar)
     NestedInner.Nested().nestVar
 
     // nested class
     // we can't directly create object by directly class name of  nested class lIKE  var c = Nested()
-    var obj2 = NestedInner.Nested()
+    val obj2 = NestedInner.Nested()
     println(obj2.nestVar)
     obj2.nestedClassFun()
 //    println(ne.topVar)  doest not possible because we haven't properties of Parent class
 
-
     // inner class
-    var obj3 = NestedInner().Inner()
+    val obj3 = NestedInner().Inner()
     println(obj3.innVar)
     obj3.innerClassFun()
-
 
 }

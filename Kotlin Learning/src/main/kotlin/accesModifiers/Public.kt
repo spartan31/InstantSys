@@ -1,12 +1,8 @@
-package accesmodifiers
- //     This is for internal and PUBLIC
-fun main() {
-    var a : Int = 10
-}
-
+package accesModifiers
+ //     This is forPUBLIC
 var c : Int = 15 ;
-open class C {
+open class Public{
     init {
-        print("Class C (Parent) class in called")
+        print("This is Public Class Objects")
     }
 }

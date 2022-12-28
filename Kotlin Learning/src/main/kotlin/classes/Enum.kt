@@ -7,6 +7,7 @@ enum class Enum {
     FOUR
 }
 
+// We cannot create instance of enum class  using constructors.
 fun main() {
     var e1: Enum = Enum.FOUR
     var e2: Enum = Enum.ONE

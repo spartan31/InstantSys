@@ -1,11 +1,9 @@
-package accesmodifiers
+package accesModifiers
 
-fun main() {
-    hello()
+private class Private(){
+    private var char :Int = 10
+    init {
+        println( "Private class members also loaded value of private member is  $char")  // accessing private char in same scope
+        println("Private Class Object is Loaded ")
+    }
 }
- fun hello(){
-    print(char)
-    println("We are saying hello to aliens")
-}
-//
-private var char :Int = 10

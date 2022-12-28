@@ -11,7 +11,7 @@ fun main() {
         println("Not Matched ")
     }
 // adding p and q directly using + operator
-    val obj = p+q
+    val obj = p + q
     println(obj.x)
     val x = p + q
     val left = arrayOf(1, 1, 1, 1)
@@ -27,6 +27,7 @@ class HeadClass(var x: Int) {
         return this.x.equals((other as HeadClass).x)
     }
 }
+
 // extending plus operator for hello class objects
 operator fun HeadClass.plus(y: HeadClass): HeadClass {
     val p = this.x + y.x + 2

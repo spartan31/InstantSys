@@ -6,31 +6,36 @@ fun main() {
     println(WithoutPrint.test())
 
     // object expression also use to create Anonymous classes. We can even inherit interfaces and classes in this.
-    var obj = object{
-        fun anonymousClassFun() = { println("Hello this ") }
+    val obj = object {
+        fun anonymousClassFun() {
+            println("Hello this ")
+        }
     }
     obj.anonymousClassFun()
 
     // anonymous objects of inheriting clone interface
-    var obj2 = object : Clone{
+    val obj2 = object : Clone {
         override fun inClone() {
             println("In cloneable Interface ")
         }
     }
     obj2.inClone()
 }
-interface  Clone{
+
+interface Clone {
     fun inClone()
 }
 
-object  WithPrint{
+object WithPrint {
     init {
         println("WithPrint class loaded on Runtime")
     }
-    const val num :Int = 17
+
+    const val num: Int = 17
 }
-object  WithoutPrint{
-    fun test(){
+
+object WithoutPrint {
+    fun test() {
         println("I am in  object of Without Print Class")
     }
 }

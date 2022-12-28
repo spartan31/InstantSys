@@ -4,8 +4,9 @@ package classes
 // it manage safety by restricting the types to be matched at compile-time rather than at runtime.
 // It is abstract so cannot be instantiated
 sealed class SealedClasses {
-   class  A(name: String , plane : Char) : SealedClasses()
-   object B : SealedClasses()
-   class C(age: Int , role : String) : SealedClasses()
-   data class D(var name: String): SealedClasses()
+    class A(name: String, plane: Char) : SealedClasses()
+    object B : SealedClasses()
+    class C(age: Int, role: String) : SealedClasses()
+    data class D(var name: String) : SealedClasses()
+    sealed interface Inter
 }

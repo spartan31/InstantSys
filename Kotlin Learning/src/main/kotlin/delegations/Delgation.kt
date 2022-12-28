@@ -1,26 +1,27 @@
 package delegations
 
-interface Download{
+interface Download {
     fun downloading()
 }
 
-interface  Upload{
+interface Upload {
     fun uploading()
 }
 
-class VideoDownload(val filename  :String) : Download{
+class VideoDownload(val filename: String) : Download {
     override fun downloading() {
         println("File : $filename is Downloading ")
     }
 }
 
-class VideoUpload(val filename: String) : Upload{
+class VideoUpload(val filename: String) : Upload {
     override fun uploading() {
         println("File : $filename is Uploading ")
     }
 }
+
 // So here we are saving our space
-class FileManager(val download: Download, val upload: Upload) : Download by download, Upload by upload{
+class FileManager(val download: Download, val upload: Upload) : Download by download, Upload by upload {
 
 //    override fun Downloading() {
 //        download.Downloading()
@@ -32,9 +33,9 @@ class FileManager(val download: Download, val upload: Upload) : Download by down
 }
 
 fun main() {
-    val mov   = VideoDownload("Movie")
+    val mov = VideoDownload("Movie")
     val song = VideoUpload("Song")
-    val file = FileManager(mov,song)
+    val file = FileManager(mov, song)
     file.downloading()
     file.uploading()
 }

@@ -1,4 +1,5 @@
 package delegations
+
 import kotlin.properties.Delegates
 
 fun main() {
@@ -14,13 +15,13 @@ fun main() {
     obj.vetoDele = 987
 }
 
-class Normal{
+class Normal {
     var obserDele: Int by Delegates.observable(initialValue = 50) { property, oldValue, newValue ->
         println("Old value is $oldValue")
         println("New value is $newValue")
     }
 
-//     Vetoable Delegates mostly similar to observable only difference is that it is also able to set value on certain condition
+    //     Vetoable Delegates mostly similar to observable only difference is that it is also able to set value on certain condition
     var vetoDele: Int by Delegates.vetoable(initialValue = 20) { property, oldValue, newValue ->
         println("Old Value is ${oldValue}")
         println("New Value is ${newValue}")

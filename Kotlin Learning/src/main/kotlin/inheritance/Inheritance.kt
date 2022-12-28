@@ -8,6 +8,7 @@ open class Parent {
 
 class Child(name: String, age: Int, school: String) : Parent(name, age) {
     var childVal: Int = 1000
+
     init {
         print(childVal)
         print("Hello from Child Side of $school school")
@@ -28,5 +29,5 @@ fun main() {
     val rect = Rectangle(10, 1)
     println(rect.area)
 
-    val parent = Parent("Mr Rakesh" , 48)
+    val parent = Parent("Mr Rakesh", 48)
 }
