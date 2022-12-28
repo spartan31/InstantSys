@@ -1,5 +1,7 @@
 import introduction.JavaClass
 
+// Introduction to basic syntax of Kotlin
+
 fun main(args: Array<String>) {
 // var is changable and val is never change it is just like final keyword
     val unchangable: Int = 10

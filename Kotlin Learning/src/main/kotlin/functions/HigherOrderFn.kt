@@ -1,5 +1,8 @@
 package functions
 
+// It is passing function in functions or returning function from function.
+// We mostly pass or return  Lambda functions in this
+
 fun main() {
     var s = ::sum
     highOrder(10, 1, s)

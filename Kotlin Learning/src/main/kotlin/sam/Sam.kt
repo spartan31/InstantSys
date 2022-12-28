@@ -1,5 +1,6 @@
 package sam
 
+// Single abstract Method Functions
 fun main() {
 //      without SAM conversion
 //    Creating an instance of a class

@@ -1,7 +1,7 @@
 package introduction
 
+// here we are going through if else and switch cases syntax
 fun main() {
-
 //     if else statements in java we can use this  as expression as well
     var a = 10
     var b = 12

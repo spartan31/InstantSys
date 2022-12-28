@@ -1,5 +1,7 @@
 package delegations
 
+//  Inheritance implementation in classes and functions can be altered with the help of delegation
+
 interface Download {
     fun downloading()
 }

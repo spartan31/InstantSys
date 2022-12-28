@@ -1,11 +1,12 @@
 package classes
 
+// object expression also use to create Anonymous classes. We can even inherit interfaces and classes in this.
+
 fun main() {
     println("Main Called")
     println(WithPrint.num)
     println(WithoutPrint.test())
 
-    // object expression also use to create Anonymous classes. We can even inherit interfaces and classes in this.
     val obj = object {
         fun anonymousClassFun() {
             println("Hello this ")

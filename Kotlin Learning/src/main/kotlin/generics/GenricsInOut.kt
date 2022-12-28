@@ -1,4 +1,4 @@
-package Misc
+package generics
 
 // By extension, generic types are invariant in Kotlin. This can be managed by the out and in
 // keywords. Invariance is the property by which a standard generic function/class already defined for
@@ -31,10 +31,12 @@ fun main() {
 }
 
 class CheckVariance<out T>(val t: T) {
-    fun getValue() = t                      // Can't use T in parameter of function like getValue( t2 :T).
+    fun getValue() = t
+    // Can't use T in parameter of function like getValue( t2 :T).
 }
 
 class CheckVarianceIn<in T>(val t: String) {   // Can't use T in reference of class parameter and function return
-    fun getValueIn(): String = t               // t can be used here getValue(t1 : T)
+    fun getValueIn(): String = t
+    // t can be used here getValue(t1 : T)
 
 }

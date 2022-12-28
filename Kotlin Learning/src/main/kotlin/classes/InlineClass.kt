@@ -8,6 +8,9 @@ value class Height(val h: Int)
 @JvmInline
 value class Width(val w: Int)
 class Rectangle(private var height: Height, private var width: Width) {
+    /**
+     * This function give details of Rectangle class object
+     */
     fun rectangleDetails() {
         println("Height is : $height and Width is $width")
     }

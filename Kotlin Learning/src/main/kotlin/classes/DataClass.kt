@@ -1,4 +1,9 @@
 package classes
+// 1. Used to store Data
+// 2. No need to code getters and setter all are by default
+// 3. At least 1 parameter is compulsory in Primary Constructor
+// 4. Parameter need to marked val or var
+// 5. We cannot mark them abstract, open
 
 fun main() {
     val p1 = Person(pAge = 40, pName = "Ana")
@@ -23,6 +28,9 @@ data class Person(var pName: String, var pAge: Int) {
         }
     }
 
+    /**
+     * Overrinding toString , hashcode , equals functions pf Data Classes
+     */
     override fun toString(): String {
         return "Person's Name : ${this.pName}  Person's Age : ${this.pAge}"
     }

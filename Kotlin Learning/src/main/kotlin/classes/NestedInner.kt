@@ -2,6 +2,10 @@ package classes
 
 class NestedInner {
     var topVar: Int = 120
+
+    /**
+     * This function is directly a member function of top class
+     */
     fun parentClass() {
         println("In Parent Class")
     }
@@ -19,6 +23,9 @@ class NestedInner {
             nestedClassFun()
         }
 
+        /**
+         * Member function of nested class
+         */
         fun nestedClassFun() {
             print("In Nested Class")
 //          print(topVar)  topVar is not accessible here means parent class members are not accessible here
@@ -34,6 +41,9 @@ class NestedInner {
             innerClassFun()
         }
 
+        /**
+         * Member function of inner class
+         */
         fun innerClassFun() {
             println("In Inner Class")
         }

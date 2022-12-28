@@ -4,7 +4,8 @@ fun main() {
     var j = 1..16  // it is between range 1 to 16
     var k = 'a'..'b' // range between characters
     var l = 1 until 10
-    var p = 16 downTo 5  // decrement
+    var p = 16 downTo 5  // decrement by step 1
+
     var list = listOf<Int>(1, 32, 3, 35, 3, 5, 3, 5, 3, 65, 65, 6, 9, 796, 7)
 
 //    here we have while & do while loops as similar to Java

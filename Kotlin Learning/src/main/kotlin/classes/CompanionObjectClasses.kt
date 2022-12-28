@@ -1,10 +1,10 @@
 package classes
 
-class Checking(name: String) {
+class Comparing(name: String) {
     var nameis = ""
 }
 
-object CompanionObj {
+object DirectObject {
     var count: Int = -1                        // This will behave like static variable as in Java
     var name: () -> Unit = {                  // This will behave like static method as in Java
         println("Current count is $count")
@@ -16,39 +16,42 @@ object CompanionObj {
 }
 
 class TopClass {
-    val headObj: Int = 16
+    val varInTopClass: Int = 16
 
     // THIS IS COMPANION OBJECT INSIDE THIS CLASS WE CAN INHERIT ALL THE PROPERTIES DIRECTLY LIKE SINGLETON OR OBJECT CLASSES
     companion object {
-        var compObj: String = "I am Companion Object"
+        var varInCompanionClass: String = "I am Companion Object"
+
         var compFunction: () -> Unit = {
             println(" Hello from function of Companion")
         }
     }
 
     object Car {
-        var name = "Honda City "
+        var carName = "Honda City "
     }
 
     object Bike {
-        var name = "Honda Activa"
+        var bikeName = "Honda Shine"
     }
 }
 
 fun main() {
-    CompanionObj.name()
-    CompanionObj.count = 16
-    CompanionObj.name()
+    DirectObject.name()
+    DirectObject.count = 16
+    DirectObject.name()
 
-    TopClass.compObj = "Change string in companion object directly" // Accessing Companion object Property Directly
+    TopClass.varInCompanionClass =
+        "Change string in companion object directly" // Accessing Companion object Property Directly
     TopClass.compFunction()
-    TopClass.Car.name   // Accessing normal object classes in TopClass
+    TopClass.Car.carName   // Accessing normal object classes in TopClass
     val objinner = TopClass.Car
-    val objInnerCompn = TopClass.compObj
-//     EACH CLASS HAS ONLY ONE COMPANION OBJECT
+    val objInnerCompn = TopClass.varInCompanionClass
 
-    val obj = CompanionObj
-    val obj2 = CompanionObj
+//  EACH CLASS HAS ONLY ONE COMPANION OBJECT
+
+    val obj = DirectObject
+    val obj2 = DirectObject
     print("This is for Object class  ")
     obj.count = 70806
     obj2.count = 8888888
@@ -57,9 +60,8 @@ fun main() {
     print(obj == obj2)
     println()
 
-    val c = Checking("a")
-    val d = Checking("a")
-    println("-----------------This is for Normal class  ----------------  ")
+    val c = Comparing("a")
+    val d = Comparing("a")
     println(c == d)
     c.nameis = "Varun"
     d.nameis = " Krishan "

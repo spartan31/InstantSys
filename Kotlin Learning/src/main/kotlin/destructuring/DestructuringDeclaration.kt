@@ -1,6 +1,6 @@
 package destructuring
 
-// this is only for data class
+// this is only for data class to access there parameters in different ways
 data class DestructClass(var c: Int, var d: Int) {
 }
 

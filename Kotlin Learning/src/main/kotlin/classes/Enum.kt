@@ -1,4 +1,7 @@
 package classes
+// Enums only supports constant values
+// When we have limited number of constant values we group them in Enums
+// They can implement interface but can't inherit from abstract class or open class
 
 enum class Enum {
     ONE,

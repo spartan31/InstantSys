@@ -1,4 +1,5 @@
-package Misc
+package nullSafety
+// One of the best feature of Kotlin language which save us from Null Pointer Exception Error.
 
 fun main() {
     val s: String? = "Suraj"

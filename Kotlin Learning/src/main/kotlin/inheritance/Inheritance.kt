@@ -1,5 +1,6 @@
 package inheritance
 
+// Inheritance is Passing parent class property to child class
 open class Parent {
     constructor(name: String, age: Int) {
         print("Parent name is $name and age is $age")

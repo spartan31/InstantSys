@@ -6,8 +6,7 @@ class Generics<T> {
     }
 }
 
-open class Mammal {
-}
+open class Mammal
 
 open class Animal : Mammal() {
     fun walk() {
@@ -21,7 +20,7 @@ class Dog : Animal() {
 }
 
 fun main() {
-//    var grn : Generics<Dog> = Generics()
+//    var gen : Generics<Dog> = Generics()
 //    var d2: Dog = Dog()
 //    grn.bark(d2)
 //    grn.bark()

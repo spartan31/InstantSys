@@ -1,5 +1,8 @@
 package delegations
 
+// Without using Lazy keyword our CLASS loads automatically without it's uses but when we use Lazy Keyword class doesn't
+// load automatically , load's only when things required
+
 class HeavyClass {
     val heavy = 1000;
 
@@ -8,8 +11,6 @@ class HeavyClass {
     }
 }
 
-// Without using Lazy keyword our CLASS loads automatically without it's uses but when we use Lazy Keyword class doesn't
-// load automatically , load's only when things required
 class Students {
     val withLazy by lazy {
         HeavyClass()

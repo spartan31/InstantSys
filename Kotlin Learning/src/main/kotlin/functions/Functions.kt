@@ -1,8 +1,11 @@
 package functions
 
+/**
+ * Different ways we can declare functions
+ */
 fun main() {
     var a = 10
-    // Normal Functions
+    // DelegateProperty Functions
     println(check(a))
 
     //  Default Parameter function
@@ -10,7 +13,6 @@ fun main() {
 
     // Inline Functions
     val inl = addInline(10, 5)
-
 
 }
 
