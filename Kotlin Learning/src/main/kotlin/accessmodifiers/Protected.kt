@@ -1,4 +1,4 @@
-package accesModifiers
+package accessmodifiers
 
 open class Protected {
     protected val valInProtected = 10

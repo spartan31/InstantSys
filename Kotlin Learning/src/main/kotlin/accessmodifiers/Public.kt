@@ -1,4 +1,4 @@
-package accesModifiers
+package accessmodifiers
 
 //     This is for Public
 

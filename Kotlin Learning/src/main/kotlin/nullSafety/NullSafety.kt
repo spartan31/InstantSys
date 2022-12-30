@@ -1,4 +1,4 @@
-package nullSafety
+package nullsafety
 // One of the best feature of Kotlin language which save us from Null Pointer Exception Error.
 
 fun main() {

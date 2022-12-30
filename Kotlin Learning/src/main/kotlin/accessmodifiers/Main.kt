@@ -1,4 +1,4 @@
-package accesModifiers
+package accessmodifiers
 
 fun main() {
     var interObj = Controller()

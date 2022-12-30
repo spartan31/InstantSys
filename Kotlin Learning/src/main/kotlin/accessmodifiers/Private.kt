@@ -1,4 +1,4 @@
-package accesModifiers
+package accessmodifiers
 
 private class Private(){
     private var numInPrivate :Int = 10
