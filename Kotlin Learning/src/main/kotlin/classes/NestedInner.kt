@@ -2,7 +2,6 @@ package classes
 
 class NestedInner {
     var topVar: Int = 120
-
     /**
      * This function is directly a member function of top class
      */
@@ -18,11 +17,9 @@ class NestedInner {
 
     class Nested() {
         var nestVar = 20
-
         init {
             nestedClassFun()
         }
-
         /**
          * Member function of nested class
          */
@@ -31,7 +28,6 @@ class NestedInner {
 //          print(topVar)  topVar is not accessible here means parent class members are not accessible here
         }
     }
-
     inner class Inner {
         var innVar = -1
 
