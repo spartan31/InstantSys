@@ -21,7 +21,7 @@ fun main() {
 //    var obj1 = Rectangle(10 ,11)
 //    obj1.rectangleDetails()
 //    var obj2 = Rectangle(11 , 10) here parameter of width and Height changed it will swap the Width and height without throwing error
-//     So we introduced Inline classes provide a wrapper Inline class to Primitive data types.
+//    So we introduced Inline classes provide a wrapper Inline class to Primitive data types.
     val h = Height(5)
     val w = Width(6)
     val obj3 = Rectangle(h, w)

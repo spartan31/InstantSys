@@ -33,7 +33,7 @@ class NestedInner {
 
         init {
             parentClass()
-            println(innVar) // we are acces parent class arguments
+            println(innVar) // we are access parent class arguments
             innerClassFun()
         }
 
@@ -49,6 +49,7 @@ class NestedInner {
 fun main() {
     val obj1 = NestedInner()
     println(obj1.topVar)
+    obj1.Inner().innVar
     NestedInner.Nested().nestVar
 
     // nested class
@@ -62,5 +63,6 @@ fun main() {
     val obj3 = NestedInner().Inner()
     println(obj3.innVar)
     obj3.innerClassFun()
+//    val obj4 = NestedInner.Inner() Not possible because we have to create Top Class object first
 
 }

@@ -1,5 +1,4 @@
 package context
-
 import kotlinx.coroutines.*
 
 fun main() = runBlocking {
@@ -21,7 +20,7 @@ fun main() = runBlocking {
         - it continues to run either in the same thread or some other thread.  */
     launch(Dispatchers.Default) {
         println("Default Parameter S-1 : ${Thread.currentThread().name}")   // Thread: T1
-        delay(1000)
+        delay(1000 )
         println("Default Parameter S-2 after delay: ${Thread.currentThread().name}")   // Thread: Either T1 or some other thread
     }
 
